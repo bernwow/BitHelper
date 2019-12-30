@@ -45,9 +45,6 @@
                         <viewLayoutGuide key="safeArea" id="eGi-U6-T3A"/>
                     </view>
                     <navigationItem key="navigationItem" id="U7x-42-COa"/>
-                    <connections>
-                        <outlet property="startButton" destination="Jya-Bm-lTm" id="5oa-8k-90J"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSJ-L9-8FD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

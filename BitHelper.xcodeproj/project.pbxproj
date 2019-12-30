@@ -22,6 +22,8 @@
 		43D6890923B9B7030086ECD0 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6890823B9B7030086ECD0 /* R.generated.swift */; };
 		43D6890C23B9BBED0086ECD0 /* CurrencyDetailController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D6890B23B9BBED0086ECD0 /* CurrencyDetailController.storyboard */; };
 		43D6890E23B9BC040086ECD0 /* CurrencyDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6890D23B9BC040086ECD0 /* CurrencyDetailController.swift */; };
+		43D6891023B9C3290086ECD0 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6890F23B9C3290086ECD0 /* Router.swift */; };
+		43D6891223B9C37D0086ECD0 /* CurrencyListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6891123B9C37D0086ECD0 /* CurrencyListModel.swift */; };
 		FCB6609BCB3D0BE0DC631BD9 /* Pods_BitHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B55CCBB767F1FB8ED0BDCAA /* Pods_BitHelper.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,8 @@
 		43D6890823B9B7030086ECD0 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		43D6890B23B9BBED0086ECD0 /* CurrencyDetailController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurrencyDetailController.storyboard; sourceTree = "<group>"; };
 		43D6890D23B9BC040086ECD0 /* CurrencyDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetailController.swift; sourceTree = "<group>"; };
+		43D6890F23B9C3290086ECD0 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		43D6891123B9C37D0086ECD0 /* CurrencyListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListModel.swift; sourceTree = "<group>"; };
 		4B55CCBB767F1FB8ED0BDCAA /* Pods_BitHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C4507BD442749ABF6A9C6A /* Pods-BitHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitHelper.debug.xcconfig"; path = "Target Support Files/Pods-BitHelper/Pods-BitHelper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +140,7 @@
 			children = (
 				43B9858123B981E50016A04F /* AppDelegate.swift */,
 				43B9858323B981E50016A04F /* SceneDelegate.swift */,
+				43D6890F23B9C3290086ECD0 /* Router.swift */,
 				43D6890A23B9BBC90086ECD0 /* CurrencyDetail */,
 				43D6890623B9B4D40086ECD0 /* CurrencyList */,
 				43D6890523B9B4C60086ECD0 /* StartScreen */,
@@ -185,6 +190,7 @@
 			children = (
 				43D688FC23B9A27B0086ECD0 /* CurrencyCell.swift */,
 				43B9858523B981E50016A04F /* CurrencyListController.swift */,
+				43D6891123B9C37D0086ECD0 /* CurrencyListModel.swift */,
 				43B9858723B981E50016A04F /* CurrencyListController.storyboard */,
 			);
 			path = CurrencyList;
@@ -384,11 +390,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D6891023B9C3290086ECD0 /* Router.swift in Sources */,
 				43D688FD23B9A27B0086ECD0 /* CurrencyCell.swift in Sources */,
 				43B9858623B981E50016A04F /* CurrencyListController.swift in Sources */,
 				43B9858223B981E50016A04F /* AppDelegate.swift in Sources */,
 				43D6890E23B9BC040086ECD0 /* CurrencyDetailController.swift in Sources */,
 				43D6890423B9B3D10086ECD0 /* StartScreenController.swift in Sources */,
+				43D6891223B9C37D0086ECD0 /* CurrencyListModel.swift in Sources */,
 				43B9858423B981E50016A04F /* SceneDelegate.swift in Sources */,
 				43D6890923B9B7030086ECD0 /* R.generated.swift in Sources */,
 			);
