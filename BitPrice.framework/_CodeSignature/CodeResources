@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/BitPrice.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		WGqmsolrDRnwUH8UoMXhCWtALkI=
+		lN2TSZ+bTc6meRoz9GwyfuDGlKs=
 		</data>
 		<key>Modules/BitPrice.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/BitPrice.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		WGqmsolrDRnwUH8UoMXhCWtALkI=
+		lN2TSZ+bTc6meRoz9GwyfuDGlKs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -76,11 +76,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WGqmsolrDRnwUH8UoMXhCWtALkI=
+			lN2TSZ+bTc6meRoz9GwyfuDGlKs=
 			</data>
 			<key>hash2</key>
 			<data>
-			zfH1XT8KyssU7dWBzPmzvwtyXEq0MCtEgFTXcxevpOY=
+			NPg+gZAKahdYG+HIDNW9fZ+GWoivzctiOtGV/xyGGog=
 			</data>
 		</dict>
 		<key>Modules/BitPrice.swiftmodule/x86_64.swiftdoc</key>
@@ -98,11 +98,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WGqmsolrDRnwUH8UoMXhCWtALkI=
+			lN2TSZ+bTc6meRoz9GwyfuDGlKs=
 			</data>
 			<key>hash2</key>
 			<data>
-			zfH1XT8KyssU7dWBzPmzvwtyXEq0MCtEgFTXcxevpOY=
+			NPg+gZAKahdYG+HIDNW9fZ+GWoivzctiOtGV/xyGGog=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

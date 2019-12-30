@@ -23,6 +23,8 @@
 		43D6891023B9C3290086ECD0 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6890F23B9C3290086ECD0 /* Router.swift */; };
 		43D6891223B9C37D0086ECD0 /* CurrencyListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6891123B9C37D0086ECD0 /* CurrencyListModel.swift */; };
 		43D6891423B9D0450086ECD0 /* CurrencyDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6891323B9D0450086ECD0 /* CurrencyDetailModel.swift */; };
+		43FAE8DE23B9D5B00003FF9F /* BitPrice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FAE8DB23B9D4E30003FF9F /* BitPrice.framework */; };
+		43FAE8DF23B9D5B00003FF9F /* BitPrice.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43FAE8DB23B9D4E30003FF9F /* BitPrice.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FCB6609BCB3D0BE0DC631BD9 /* Pods_BitHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B55CCBB767F1FB8ED0BDCAA /* Pods_BitHelper.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,12 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		43D688EF23B99DF60086ECD0 /* Embed Frameworks */ = {
+		43FAE8E023B9D5B00003FF9F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				43FAE8DF23B9D5B00003FF9F /* BitPrice.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +74,7 @@
 		43D6890F23B9C3290086ECD0 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		43D6891123B9C37D0086ECD0 /* CurrencyListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListModel.swift; sourceTree = "<group>"; };
 		43D6891323B9D0450086ECD0 /* CurrencyDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetailModel.swift; sourceTree = "<group>"; };
+		43FAE8DB23B9D4E30003FF9F /* BitPrice.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BitPrice.framework; sourceTree = "<group>"; };
 		4B55CCBB767F1FB8ED0BDCAA /* Pods_BitHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C4507BD442749ABF6A9C6A /* Pods-BitHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitHelper.debug.xcconfig"; path = "Target Support Files/Pods-BitHelper/Pods-BitHelper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43FAE8DE23B9D5B00003FF9F /* BitPrice.framework in Frameworks */,
 				FCB6609BCB3D0BE0DC631BD9 /* Pods_BitHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +157,7 @@
 		43B985A323B9820C0016A04F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43FAE8DB23B9D4E30003FF9F /* BitPrice.framework */,
 				4B55CCBB767F1FB8ED0BDCAA /* Pods_BitHelper.framework */,
 			);
 			name = Frameworks;
@@ -200,7 +206,7 @@
 				43B9857B23B981E50016A04F /* Frameworks */,
 				43B9857C23B981E50016A04F /* Resources */,
 				E2F7F9D3F2B8EE363240B407 /* [CP] Embed Pods Frameworks */,
-				43D688EF23B99DF60086ECD0 /* Embed Frameworks */,
+				43FAE8E023B9D5B00003FF9F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
