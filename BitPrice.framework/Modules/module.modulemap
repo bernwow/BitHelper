@@ -1,0 +1,11 @@
+framework module BitPrice {
+  umbrella header "BitPrice.h"
+
+  export *
+  module * { export * }
+}
+
+module BitPrice.Swift {
+    header "BitPrice-Swift.h"
+    requires objc
+}
