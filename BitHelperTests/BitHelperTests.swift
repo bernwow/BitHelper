@@ -19,7 +19,12 @@ class BitHelperTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    func testCurrencyModel() {
+        let currencyListModel = CurrencyListModel()
+        currencyListModel.startUpdating()
+        XCTAssert(currencyListModel.timer != nil)
+        XCTAssert(currencyListModel.timer?.isValid ?? false)
+
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }

@@ -51,6 +51,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObH-eJ-Z9d">
+                                <rect key="frame" x="151" y="228" width="112" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Update price"/>
+                                <connections>
+                                    <action selector="updatePriceTapped:" destination="YI0-mx-d5p" eventType="touchUpInside" id="2Sw-2I-VYY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -61,7 +69,9 @@
                             <constraint firstItem="R3V-RW-Tn1" firstAttribute="leading" secondItem="307-dG-3YR" secondAttribute="leading" constant="40" id="9Tc-NM-p3n"/>
                             <constraint firstItem="Wrf-uL-SZ4" firstAttribute="centerY" secondItem="R3V-RW-Tn1" secondAttribute="centerY" id="9lK-S3-Fc3"/>
                             <constraint firstItem="307-dG-3YR" firstAttribute="trailing" secondItem="bLD-lg-ogP" secondAttribute="trailing" constant="40" id="Djb-rO-VXt"/>
+                            <constraint firstItem="ObH-eJ-Z9d" firstAttribute="centerX" secondItem="2Rf-bD-t2o" secondAttribute="centerX" id="FG9-a1-r6u"/>
                             <constraint firstItem="307-dG-3YR" firstAttribute="trailing" secondItem="uiw-JQ-VD8" secondAttribute="trailing" constant="40" id="M2t-u1-4pB"/>
+                            <constraint firstItem="ObH-eJ-Z9d" firstAttribute="top" secondItem="bLD-lg-ogP" secondAttribute="bottom" constant="40" id="Ohl-oG-rVk"/>
                             <constraint firstItem="tLG-D2-9wj" firstAttribute="top" secondItem="307-dG-3YR" secondAttribute="top" constant="40" id="TqT-jw-oc9"/>
                             <constraint firstItem="R3V-RW-Tn1" firstAttribute="top" secondItem="tLG-D2-9wj" secondAttribute="bottom" constant="16" id="YU3-ug-9zt"/>
                             <constraint firstItem="uiw-JQ-VD8" firstAttribute="centerY" secondItem="tLG-D2-9wj" secondAttribute="centerY" id="mwc-KF-1ce"/>
