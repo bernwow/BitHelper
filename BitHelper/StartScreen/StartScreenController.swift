@@ -23,8 +23,8 @@ struct Router {
     }
     
     func navigateToCurrencyDetailController(model: CryptoCurrency) {
-
-        
+        let pushedViewController = CurrencyDetailController.instantiateWith(model)
+        viewController?.navigationController?.pushViewController(pushedViewController, animated: true)
     }
 }
 

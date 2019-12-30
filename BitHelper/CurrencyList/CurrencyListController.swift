@@ -41,7 +41,7 @@ class CurrencyListController: UIViewController, StoryboardBased {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        title = "Currency list"
         
         model.currencies.filterNil()
             .bind(to: self.tableView.rx.items(cellIdentifier: "currencyCell", cellType: CurrencyCell.self)) { (row, element, cell) in
@@ -49,10 +49,11 @@ class CurrencyListController: UIViewController, StoryboardBased {
             }
             .disposed(by: disposeBag)
             
-        
-        tableView.rx.modelSelected(CryptoCurrency.self).subscribe { (currency) in
+        tableView.rx.modelSelected(CryptoCurrency.self).asDriver().drive(onNext: { [unowned self] (currency) in
+           
+            Router(viewController: self).navigateToCurrencyDetailController(model: currency)
             
-        }.disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
 
     }
 

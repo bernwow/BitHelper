@@ -89,14 +89,23 @@ struct R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
-  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
   struct storyboard {
+    /// Storyboard `CurrencyDetailController`.
+    static let currencyDetailController = _R.storyboard.currencyDetailController()
     /// Storyboard `CurrencyListController`.
     static let currencyListController = _R.storyboard.currencyListController()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `StartScreenController`.
     static let startScreenController = _R.storyboard.startScreenController()
+
+    #if os(iOS) || os(tvOS)
+    /// `UIStoryboard(name: "CurrencyDetailController", bundle: ...)`
+    static func currencyDetailController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.currencyDetailController)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIStoryboard(name: "CurrencyListController", bundle: ...)`
@@ -155,6 +164,9 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       #if os(iOS) || os(tvOS)
+      try currencyDetailController.validate()
+      #endif
+      #if os(iOS) || os(tvOS)
       try currencyListController.validate()
       #endif
       #if os(iOS) || os(tvOS)
@@ -164,6 +176,22 @@ struct _R: Rswift.Validatable {
       try startScreenController.validate()
       #endif
     }
+
+    #if os(iOS) || os(tvOS)
+    struct currencyDetailController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = CurrencyDetailController
+
+      let bundle = R.hostingBundle
+      let name = "CurrencyDetailController"
+
+      static func validate() throws {
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+      }
+
+      fileprivate init() {}
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     struct currencyListController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
