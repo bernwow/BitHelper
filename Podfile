@@ -1,9 +1,10 @@
 use_frameworks!
-#source 'https://github.com/bernwow/BitPrice.git'
 target 'BitHelper' do
 
 pod "RxCocoa"
 pod "Moya-ModelMapper/RxSwift"
 pod "RxOptional"
+pod 'R.swift', '5.1.0'
+pod 'Reusable', '4.1.0'
 
 end

@@ -17,6 +17,9 @@
 		43D688F823B99EFB0086ECD0 /* BitPrice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D688F523B99E850086ECD0 /* BitPrice.framework */; };
 		43D688F923B99EFB0086ECD0 /* BitPrice.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43D688F523B99E850086ECD0 /* BitPrice.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43D688FD23B9A27B0086ECD0 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D688FC23B9A27B0086ECD0 /* CurrencyCell.swift */; };
+		43D6890123B9B3A00086ECD0 /* StartScreenController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D6890023B9B3A00086ECD0 /* StartScreenController.storyboard */; };
+		43D6890423B9B3D10086ECD0 /* StartScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6890323B9B3D10086ECD0 /* StartScreenController.swift */; };
+		43D6890923B9B7030086ECD0 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6890823B9B7030086ECD0 /* R.generated.swift */; };
 		FCB6609BCB3D0BE0DC631BD9 /* Pods_BitHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B55CCBB767F1FB8ED0BDCAA /* Pods_BitHelper.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +69,9 @@
 		43B9859A23B981E70016A04F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43D688F023B99E850086ECD0 /* BitPrice.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BitPrice.xcodeproj; path = ../BitPriceGit/BitPrice.xcodeproj; sourceTree = "<group>"; };
 		43D688FC23B9A27B0086ECD0 /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		43D6890023B9B3A00086ECD0 /* StartScreenController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartScreenController.storyboard; sourceTree = "<group>"; };
+		43D6890323B9B3D10086ECD0 /* StartScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenController.swift; sourceTree = "<group>"; };
+		43D6890823B9B7030086ECD0 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		4B55CCBB767F1FB8ED0BDCAA /* Pods_BitHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C4507BD442749ABF6A9C6A /* Pods-BitHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitHelper.debug.xcconfig"; path = "Target Support Files/Pods-BitHelper/Pods-BitHelper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +108,7 @@
 		43B9857523B981E50016A04F = {
 			isa = PBXGroup;
 			children = (
+				43D6890823B9B7030086ECD0 /* R.generated.swift */,
 				43D688F023B99E850086ECD0 /* BitPrice.xcodeproj */,
 				43B9858023B981E50016A04F /* BitHelper */,
 				43B9859723B981E70016A04F /* BitHelperTests */,
@@ -126,8 +133,8 @@
 				43B9858123B981E50016A04F /* AppDelegate.swift */,
 				43B9858323B981E50016A04F /* SceneDelegate.swift */,
 				43D688FC23B9A27B0086ECD0 /* CurrencyCell.swift */,
-				43B9858523B981E50016A04F /* CurrencyListController.swift */,
-				43B9858723B981E50016A04F /* CurrencyListController.storyboard */,
+				43D6890623B9B4D40086ECD0 /* CurrencyList */,
+				43D6890523B9B4C60086ECD0 /* StartScreen */,
 				43B9858A23B981E70016A04F /* Assets.xcassets */,
 				43B9858C23B981E70016A04F /* LaunchScreen.storyboard */,
 				43B9858F23B981E70016A04F /* Info.plist */,
@@ -160,6 +167,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		43D6890523B9B4C60086ECD0 /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				43D6890323B9B3D10086ECD0 /* StartScreenController.swift */,
+				43D6890023B9B3A00086ECD0 /* StartScreenController.storyboard */,
+			);
+			path = StartScreen;
+			sourceTree = "<group>";
+		};
+		43D6890623B9B4D40086ECD0 /* CurrencyList */ = {
+			isa = PBXGroup;
+			children = (
+				43B9858523B981E50016A04F /* CurrencyListController.swift */,
+				43B9858723B981E50016A04F /* CurrencyListController.storyboard */,
+			);
+			path = CurrencyList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,6 +193,7 @@
 			buildConfigurationList = 43B9859D23B981E70016A04F /* Build configuration list for PBXNativeTarget "BitHelper" */;
 			buildPhases = (
 				B5BF1272149AE3A7E241B695 /* [CP] Check Pods Manifest.lock */,
+				43D6890723B9B63D0086ECD0 /* Generate R */,
 				43B9857A23B981E50016A04F /* Sources */,
 				43B9857B23B981E50016A04F /* Frameworks */,
 				43B9857C23B981E50016A04F /* Resources */,
@@ -262,6 +288,7 @@
 			files = (
 				43B9858E23B981E70016A04F /* LaunchScreen.storyboard in Resources */,
 				43B9858B23B981E70016A04F /* Assets.xcassets in Resources */,
+				43D6890123B9B3A00086ECD0 /* StartScreenController.storyboard in Resources */,
 				43B9858923B981E50016A04F /* CurrencyListController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +303,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		43D6890723B9B63D0086ECD0 /* Generate R */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "Generate R";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		B5BF1272149AE3A7E241B695 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -325,7 +372,9 @@
 				43D688FD23B9A27B0086ECD0 /* CurrencyCell.swift in Sources */,
 				43B9858623B981E50016A04F /* CurrencyListController.swift in Sources */,
 				43B9858223B981E50016A04F /* AppDelegate.swift in Sources */,
+				43D6890423B9B3D10086ECD0 /* StartScreenController.swift in Sources */,
 				43B9858423B981E50016A04F /* SceneDelegate.swift in Sources */,
+				43D6890923B9B7030086ECD0 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

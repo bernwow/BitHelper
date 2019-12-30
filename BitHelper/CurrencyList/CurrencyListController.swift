@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Reusable
 import BitPrice
 import RxSwift
 import RxCocoa
@@ -24,9 +25,15 @@ class CurrencyListModel {
             }
         }
     }
+    
+    func stopUpdating() {
+        if let timer = timer, timer.isValid {
+            timer.invalidate()
+        }
+    }
 }
 
-class CurrencyListController: UIViewController {
+class CurrencyListController: UIViewController, StoryboardBased {
     @IBOutlet weak var tableView: UITableView!
     let disposeBag = DisposeBag()
     let model = CurrencyListModel()
@@ -41,12 +48,23 @@ class CurrencyListController: UIViewController {
                 cell.setModel(element)
             }
             .disposed(by: disposeBag)
+            
         
-//        tableView.rx.itemSelected.bind { (indexPath) in
-//            self.model.currencies.value?[indexPath.row]
-//        }.disposed(by: disposeBag)
+        tableView.rx.modelSelected(CryptoCurrency.self).subscribe { (currency) in
+            
+        }.disposed(by: disposeBag)
+
     }
 
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        model.startUpdating()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        model.stopUpdating()
+    }
+    
 }
 
