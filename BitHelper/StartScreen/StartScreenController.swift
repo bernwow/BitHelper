@@ -9,14 +9,18 @@
 import UIKit
 import Reusable
 import BitPrice
+import RxSwift
+import RxCocoa
 
 class StartScreenController: UIViewController, StoryboardBased {
+    @IBOutlet weak var showButton: UIButton!
+    let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-
-    @IBAction func startButtonTapped(_ sender: Any) {
-        Router(viewController: self).navigateToCurrencyListController()
+        
+        showButton.rx.tap.asDriver().drive(onNext: { [unowned self] _ in
+            Router(viewController: self).navigateToCurrencyListController()
+        }).disposed(by: disposeBag)
     }
 }

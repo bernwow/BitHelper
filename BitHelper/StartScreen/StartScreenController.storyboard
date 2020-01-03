@@ -36,15 +36,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Show currencies"/>
-                                <connections>
-                                    <action selector="startButtonTapped:" destination="GeJ-fR-zpA" eventType="touchUpInside" id="wNd-qa-Rje"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="eGi-U6-T3A"/>
                     </view>
                     <navigationItem key="navigationItem" id="U7x-42-COa"/>
+                    <connections>
+                        <outlet property="showButton" destination="Jya-Bm-lTm" id="Gca-AJ-c05"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSJ-L9-8FD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -34,11 +34,11 @@ class CurrencyDetailController: UIViewController, StoryboardBased {
             if let value = currencies.value, let model = value.first {
                 self.updateUI(model)
             }
-            }).disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
         
-        updateButton.rx.tap.asDriver().drive(onNext: { _ in
+        updateButton.rx.tap.asDriver().drive(onNext: { [unowned self] _ in
             self.model.updateCurrency()
-            }).disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
     }
     
     func updateUI(_ model: CryptoCurrency) {
