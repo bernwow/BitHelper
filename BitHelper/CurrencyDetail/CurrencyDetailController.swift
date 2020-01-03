@@ -16,6 +16,8 @@ class CurrencyDetailController: UIViewController, StoryboardBased {
     @IBOutlet weak var symbolLabel: UILabel!
     @IBOutlet weak var priceUSDLabel: UILabel!
     @IBOutlet weak var priceBTCLabel: UILabel!
+    @IBOutlet weak var updateButton: UIButton!
+    
     let model = CurrencyDetailModel()
     let disposeBag = DisposeBag()
     
@@ -33,6 +35,10 @@ class CurrencyDetailController: UIViewController, StoryboardBased {
                 self.updateUI(model)
             }
             }).disposed(by: disposeBag)
+        
+        updateButton.rx.tap.asDriver().drive(onNext: { _ in
+            self.model.updateCurrency()
+            }).disposed(by: disposeBag)
     }
     
     func updateUI(_ model: CryptoCurrency) {
@@ -42,9 +48,4 @@ class CurrencyDetailController: UIViewController, StoryboardBased {
         priceBTCLabel.text = model.priceBtc
     }
 
-    @IBAction func updatePriceTapped(_ sender: Any) {
-        if let currencyId = model.currencyContainer.value?.first?.id {
-            model.updateCurrency(currencyId)
-        }
-    }
 }

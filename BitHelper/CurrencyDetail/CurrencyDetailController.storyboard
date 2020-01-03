@@ -55,9 +55,6 @@
                                 <rect key="frame" x="151" y="228" width="112" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Update price"/>
-                                <connections>
-                                    <action selector="updatePriceTapped:" destination="YI0-mx-d5p" eventType="touchUpInside" id="2Sw-2I-VYY"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -86,6 +83,7 @@
                         <outlet property="priceBTCLabel" destination="bLD-lg-ogP" id="bOs-ro-svy"/>
                         <outlet property="priceUSDLabel" destination="Wrf-uL-SZ4" id="EDf-1n-637"/>
                         <outlet property="symbolLabel" destination="uiw-JQ-VD8" id="UyQ-MY-SZO"/>
+                        <outlet property="updateButton" destination="ObH-eJ-Z9d" id="ez0-OQ-ebp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mV6-ur-Qr8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

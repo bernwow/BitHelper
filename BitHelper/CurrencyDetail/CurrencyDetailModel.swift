@@ -16,7 +16,9 @@ class CurrencyDetailModel {
     let bitPrices = BitPrices()
     let currencyContainer = BehaviorRelay<[CryptoCurrency]?>(value: [])
     
-    func updateCurrency(_ currencyId: String) {
-        bitPrices.getCurrency(currencyId: currencyId).bind(to: currencyContainer).disposed(by: disposeBag)
+    func updateCurrency() {
+        if let currencyId = currencyContainer.value?.first?.id {
+            bitPrices.getCurrency(currencyId: currencyId).bind(to: currencyContainer).disposed(by: disposeBag)
+        }
     }
 }
